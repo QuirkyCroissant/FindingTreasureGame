@@ -1,5 +1,5 @@
 
-# Game Client-Server Project
+# Finding Treasure Game: Client-Server Java Project
 
 This project implements a game with both client and server components. The client handles the user interface, game logic, and AI, while the server manages game data, game logic, and client interactions.
 
