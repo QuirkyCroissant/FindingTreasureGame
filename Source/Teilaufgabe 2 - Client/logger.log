@@ -1,0 +1,126 @@
+455  [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+458  [main] DEBUG i.n.u.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+458  [main] DEBUG i.n.u.internal.PlatformDependent0 - Java version: 18
+461  [main] DEBUG i.n.u.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+461  [main] DEBUG i.n.u.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+462  [main] DEBUG i.n.u.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+463  [main] DEBUG i.n.u.internal.PlatformDependent0 - java.nio.Buffer.address: available
+466  [main] DEBUG i.n.u.internal.PlatformDependent0 - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:288)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:282)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88)
+	at io.netty.util.AsciiString.<init>(AsciiString.java:223)
+	at io.netty.util.AsciiString.<init>(AsciiString.java:210)
+	at io.netty.util.AsciiString.cached(AsciiString.java:1401)
+	at io.netty.util.AsciiString.<clinit>(AsciiString.java:48)
+	at reactor.netty.http.client.HttpClientConnect.<clinit>(HttpClientConnect.java:698)
+	at reactor.netty.http.client.HttpClient.create(HttpClient.java:398)
+	at org.springframework.http.client.reactive.ReactorClientHttpConnector.<init>(ReactorClientHttpConnector.java:56)
+	at org.springframework.web.reactive.function.client.DefaultWebClientBuilder.initConnector(DefaultWebClientBuilder.java:289)
+	at org.springframework.web.reactive.function.client.DefaultWebClientBuilder.build(DefaultWebClientBuilder.java:266)
+	at network_logic.NetworkClient.<init>(NetworkClient.java:40)
+	at client.main.MainClient.main(MainClient.java:79)
+467  [main] DEBUG i.n.u.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+469  [main] DEBUG i.n.u.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @2e377400
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:394)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:410)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:401)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88)
+	at io.netty.util.AsciiString.<init>(AsciiString.java:223)
+	at io.netty.util.AsciiString.<init>(AsciiString.java:210)
+	at io.netty.util.AsciiString.cached(AsciiString.java:1401)
+	at io.netty.util.AsciiString.<clinit>(AsciiString.java:48)
+	at reactor.netty.http.client.HttpClientConnect.<clinit>(HttpClientConnect.java:698)
+	at reactor.netty.http.client.HttpClient.create(HttpClient.java:398)
+	at org.springframework.http.client.reactive.ReactorClientHttpConnector.<init>(ReactorClientHttpConnector.java:56)
+	at org.springframework.web.reactive.function.client.DefaultWebClientBuilder.initConnector(DefaultWebClientBuilder.java:289)
+	at org.springframework.web.reactive.function.client.DefaultWebClientBuilder.build(DefaultWebClientBuilder.java:266)
+	at network_logic.NetworkClient.<init>(NetworkClient.java:40)
+	at client.main.MainClient.main(MainClient.java:79)
+471  [main] DEBUG i.n.u.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+471  [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+488  [main] DEBUG i.n.util.internal.PlatformDependent - maxDirectMemory: 4221566976 bytes (maybe)
+488  [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\FLORIA~1\AppData\Local\Temp (java.io.tmpdir)
+488  [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+488  [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+490  [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+490  [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+492  [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+492  [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+531  [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+532  [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+582  [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+582  [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+1175 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+1176 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+1197 [main] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+1198 [main] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+1330 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 32
+1353 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+1353 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+1361 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+1423 [main] DEBUG i.n.r.DefaultHostsFileEntriesResolver - -Dio.netty.hostsFileRefreshInterval: 0
+1447 [main] DEBUG i.n.r.d.DefaultDnsServerAddressStreamProvider - Default DNS servers: [/131.130.1.11:53, /131.130.1.12:53] (sun.net.dns.ResolverConfiguration)
+1501 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 3472 (auto-detected)
+1535 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: 20:1e:88:ff:fe:d4:58:82 (auto-detected)
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 32
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 32
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+1560 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+1572 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+1572 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+1572 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+1623 [reactor-http-nio-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+1624 [reactor-http-nio-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+1627 [reactor-http-nio-2] DEBUG i.n.u.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@c436e2d
+1675 [reactor-http-nio-1] DEBUG i.n.u.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@33035f3
+1686 [reactor-http-nio-1] DEBUG i.n.resolver.dns.DnsQueryContext - [id: 0x8a38523b] WRITE: UDP, [26866: /131.130.1.11:53], DefaultDnsQuestion(swe1.wst.univie.ac.at. IN A)
+1692 [reactor-http-nio-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+1692 [reactor-http-nio-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+1692 [reactor-http-nio-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+1692 [reactor-http-nio-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+1702 [reactor-http-nio-1] DEBUG i.n.resolver.dns.DnsQueryContext - [id: 0x8a38523b] WRITE: UDP, [3090: /131.130.1.11:53], DefaultDnsQuestion(swe1.wst.univie.ac.at. IN AAAA)
+1716 [reactor-http-nio-1] DEBUG i.n.resolver.dns.DnsNameResolver - [id: 0x8a38523b] RECEIVED: UDP [3090: /131.130.1.11:53], DatagramDnsResponse(from: /131.130.1.11:53, to: /[0:0:0:0:0:0:0:0]:62510, 3090, QUERY(0), NoError(0), RD RA)
+	DefaultDnsQuestion(swe1.wst.univie.ac.at. IN AAAA)
+	DefaultDnsRawRecord(wst.univie.ac.at. 3518 IN SOA 41B)
+	DefaultDnsRawRecord(OPT flags:0 udp:4096 0B)
+1717 [reactor-http-nio-1] DEBUG i.n.resolver.dns.DnsNameResolver - [id: 0x8a38523b] RECEIVED: UDP [26866: /131.130.1.11:53], DatagramDnsResponse(from: /131.130.1.11:53, to: /[0:0:0:0:0:0:0:0]:62510, 26866, QUERY(0), NoError(0), RD RA)
+	DefaultDnsQuestion(swe1.wst.univie.ac.at. IN A)
+	DefaultDnsRawRecord(swe1.wst.univie.ac.at. 68397 IN A 4B)
+	DefaultDnsRawRecord(OPT flags:0 udp:4096 0B)
+1952 [reactor-http-nio-2] DEBUG i.n.h.codec.compression.Brotli - brotli4j not in the classpath; Brotli support will be unavailable.
+2060 [reactor-http-nio-1] DEBUG i.n.resolver.dns.DnsQueryContext - [id: 0x8c19bfc8] WRITE: UDP, [41018: /131.130.1.11:53], DefaultDnsQuestion(swe1.wst.univie.ac.at. IN A)
+2061 [reactor-http-nio-1] DEBUG i.n.resolver.dns.DnsQueryContext - [id: 0x8c19bfc8] WRITE: UDP, [23199: /131.130.1.11:53], DefaultDnsQuestion(swe1.wst.univie.ac.at. IN AAAA)
+2069 [reactor-http-nio-1] DEBUG i.n.resolver.dns.DnsNameResolver - [id: 0x8c19bfc8] RECEIVED: UDP [41018: /131.130.1.11:53], DatagramDnsResponse(from: /131.130.1.11:53, to: /[0:0:0:0:0:0:0:0]:62511, 41018, QUERY(0), NoError(0), RD RA)
+	DefaultDnsQuestion(swe1.wst.univie.ac.at. IN A)
+	DefaultDnsRawRecord(swe1.wst.univie.ac.at. 68398 IN A 4B)
+	DefaultDnsRawRecord(OPT flags:0 udp:4096 0B)
+2074 [reactor-http-nio-1] DEBUG i.n.resolver.dns.DnsNameResolver - [id: 0x8c19bfc8] RECEIVED: UDP [23199: /131.130.1.11:53], DatagramDnsResponse(from: /131.130.1.11:53, to: /[0:0:0:0:0:0:0:0]:62511, 23199, QUERY(0), NoError(0), RD RA)
+	DefaultDnsQuestion(swe1.wst.univie.ac.at. IN AAAA)
+	DefaultDnsRawRecord(wst.univie.ac.at. 3533 IN SOA 41B)
+	DefaultDnsRawRecord(OPT flags:0 udp:4096 0B)
+21154639 [main] DEBUG gaming_map.MapGenerator - 1. Attempt: 
+4640 [main] DEBUG gaming_map.MapGenerator - 2. Attempt: 
+4641 [main] DEBUG gaming_map.MapGenerator - [51;106m~~[0m[51;102m,,[0m[51;102m,,[0m[51;215m/\[0m[51;101m|>[0m[51;102m,,[0m[51;215m/\[0m[51;102m,,[0m[51;102m,,[0m[51;102m,,[0m
+[51;215m/\[0m[51;106m~~[0m[51;102m,,[0m[51;102m,,[0m[51;215m/\[0m[51;102m,,[0m[51;102m,,[0m[51;102m,,[0m[51;106m~~[0m[51;215m/\[0m
+[51;102m,,[0m[51;215m/\[0m[51;102m,,[0m[51;102m,,[0m[51;215m/\[0m[51;102m,,[0m[51;215m/\[0m[51;106m~~[0m[51;106m~~[0m[51;102m,,[0m
+[51;102m,,[0m[51;215m/\[0m[51;106m~~[0m[51;102m,,[0m[51;102m,,[0m[51;215m/\[0m[51;106m~~[0m[51;102m,,[0m[51;102m,,[0m[51;102m,,[0m
+[51;102m,,[0m[51;102m,,[0m[51;102m,,[0m[51;215m/\[0m[51;102m,,[0m[51;102m,,[0m[51;215m/\[0m[51;102m,,[0m[51;106m~~[0m[51;215m/\[0m
+

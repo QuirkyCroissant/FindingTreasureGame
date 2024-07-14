@@ -1,0 +1,56 @@
+<configuration>
+	<!--<timestamp key="time" datePattern="yyyyMMdd'T'HHmmss"/>-->
+   <!-- Additional appender (more complex, e.g. logging into files) are given in the logging script on Moodle -->
+   <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+       <encoder>
+           <pattern>
+               %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+           </pattern>
+       </encoder>
+       <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+   </appender>
+   
+   <appender name="file" class="ch.qos.logback.core.FileAppender">
+	<!-- encoders are assigned the type
+	ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+	  <!-- <file>logger-${time}.log</file> -->
+	   <file>logger.log</file>
+	   <append>false</append>
+	  <encoder>
+	       <pattern> 
+			   %-4relative [%thread] %-5level %logger{35} - %msg%n
+		   </pattern>
+	  </encoder>
+	  <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+   </appender>
+	
+	
+   <!-- We can set the logging behaviour for specific packages, e.g. package "client" and it's sub-packages -->
+   <logger name="client" level="INFO"/>
+   <logger name="logger.log" level="DEBUG">
+	   <appender-ref ref="file" />
+   </logger>
+
+   <!-- We can even control the logging behaviour for other libaries thanks to SLF4J -->
+   <!-- The logger configurations below significantly reduces the very chatty output of webflux -->
+   <logger name="reactor" level="ERROR"/>
+   <logger name="reactor.Mono" level="ERROR"/>
+   <logger name="reactor.Flux" level="ERROR"/>
+   <logger name="org.springframework.web" level="ERROR"/>
+  
+   <!-- We can set the default logging behaviour for our own code too -->
+   <!-- If you add an additonal appender "register" them here --> 
+   <root level="ALL">
+       <appender-ref ref="console"/>
+       <appender-ref ref="file"/>
+   </root>
+   
+</configuration>
